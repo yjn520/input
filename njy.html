@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="text" id="a" value="">
+<select id="fh">
+				<option value="+" selected>+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+<input type="text" id="b" value="">
+<input type="button" value="=" id="bj">
+<input type="text" id="c" value="">
+<script>
+		var inputa=document.getElementById('a');
+		var inputb=document.getElementById('b');
+		var inputb=document.getElementById('c');
+		var bj=document.getElementById('bj');
+		var fh=document.getElementById('fh');
+		bj.onclick=function(){
+			var v1=a.value;
+			var v2=b.value;
+			if(v1!='' && v2!=''){
+      if(!isNaN(v1) && !isNaN(v2)){
+
+		var v1=parseFloat(a.value);
+    var v2=parseFloat(b.value);
+    var v3=fh.value;
+    var num=v3=="+"?(v1+v2):v3=="-"?(v1-v2):v3=="*"?(v1*v2):(v1/v2);
+    c.value=num;
+  	}else{
+			c.value='文本框不是数字';
+		}
+		}else{
+			c.value='文本框没有填写';
+		}
+		if(v3=="/" && v2==0 ){
+			c.value='除数不能为0';
+		}
+	}
+
+
+	</script>
+
+</body>
+</html>
